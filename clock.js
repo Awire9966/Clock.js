@@ -1,48 +1,19 @@
-function startTime() {
-    console.clear()
-    console.r
-    var minute = 0
-    var moth = 0
-    var d8 = 0
-    let month = 0
-    const today = new Date();
-    let h = today.getHours();
-    let m = today.getMinutes();
-    let monthu = today.getMonth();
-    
-    let year  = today.getFullYear();
-    let day = today.getDate();
-   month = monthu + 1;
-    if(m < 10)
-{
-    minute = "0" + m;
-}
-else{
-  minute = m;
+const opts = {minimumIntegerDigits: 2};
 
-}
-if(monthu < 10)
-{
-    moth = "0" + month;
-}
-else{
-  moth = month;
+function displayTime() {
+	console.clear();
 
-}
-if(day < 10)
-{
-    d8 = "0" + day;
-}
-else{
-  d8 = day;
+	const today = new Date();
+	let hour = today.getHours().toLocaleString("en", opts);
+	let minute = today.getMinutes().toLocaleString("en", opts);
 
+	let year = today.getFullYear();
+	let month = (today.getMonth() + 1).toLocaleString("en", opts);
+	let day = today.getDate().toLocaleString("en", opts);
+
+
+	console.log(month + "/" + day + "/" + year);
+	console.log(hour + ":" + minute);
 }
- 
- 
-    console.log(moth + "/" + d8 + "/" + year);
-    console.log(h + ":" + minute);
-    
-   setTimeout(startTime, 1000);
-  }
-  startTime.call();
-  
+
+setInterval(displayTime, 1000);
