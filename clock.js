@@ -5,7 +5,7 @@ function startTime() {
     var moth = 0
     var d8 = 0
     let month = 0
-    const today = new Date();
+    var today = new Date();
     let h = today.getHours();
     let m = today.getMinutes();
     let monthu = today.getMonth();
