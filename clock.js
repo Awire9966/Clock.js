@@ -39,8 +39,8 @@ else{
 }
  
  
-    alert(moth + "/" + d8 + "/" + year);
-    alert(h + ":" + minute);
+    console.log(moth + "/" + d8 + "/" + year);
+    console.log(h + ":" + minute);
     
    setTimeout(startTime, 1000);
   }
